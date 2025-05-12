@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Business Directory</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>LocalBiz</h1>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#featured">Featured</a>
+            <a href="#about">About</a>
+        </div>
+        <div class="auth-buttons">
+            <button id="loginBtn" class="btn">Sign In</button>
+            <button id="registerBtn" class="btn btn-primary">Sign Up</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Discover Local Businesses</h1>
+            <p>Find, review, and connect with the best local businesses in your area</p>
+            <div class="search-container">
+                <input type="text" placeholder="Search businesses...">
+                <select>
+                    <option value="">All Categories</option>
+                    <option value="restaurants">Restaurants</option>
+                    <option value="retail">Retail</option>
+                    <option value="services">Services</option>
+                    <option value="health">Health & Wellness</option>
+                </select>
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="categories" class="categories">
+        <h2>Browse by Category</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <i class="fas fa-utensils"></i>
+                <h3>Restaurants</h3>
+                <p>Discover local eateries</p>
+            </div>
+            <div class="category-card">
+                <i class="fas fa-shopping-bag"></i>
+                <h3>Retail</h3>
+                <p>Shop local stores</p>
+            </div>
+            <div class="category-card">
+                <i class="fas fa-wrench"></i>
+                <h3>Services</h3>
+                <p>Find local services</p>
+            </div>
+            <div class="category-card">
+                <i class="fas fa-heart"></i>
+                <h3>Health & Wellness</h3>
+                <p>Stay healthy locally</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="featured" class="featured">
+        <h2>Featured Businesses</h2>
+        <div class="business-grid">
+            <!-- Business cards will be dynamically populated -->
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign In</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create Account</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="regName">Full Name</label>
+                    <input type="text" id="regName" required>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Email</label>
+                    <input type="email" id="regEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Password</label>
+                    <input type="password" id="regPassword" required minlength="6">
+                    <small class="help-text">Password must be at least 6 characters long</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About LocalBiz</h3>
+                <p>Connecting local businesses with their community.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@localbiz.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 LocalBiz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html> 
